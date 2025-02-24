@@ -1,0 +1,29 @@
+<?php 
+
+$price = 150;
+$discountPercent = $price * 0.30;
+// echo $discountPercent; // OUTPUT: 45
+$newPrice1 = $price - $discountPercent; // 150 - 45
+// echo $newPrice1; // OUTPUT: $105
+$discountFlat = $newPrice1 - 10; // 105 - 10
+// echo $discountFlat; // OUTPUT: $95
+$tax = $discountFlat * 0.20;
+// echo $tax // OUTPUT: $19
+$newPrice2 = $discountFlat + $tax;
+// echo $newPrice2; // OUTPUT: 114
+$loyalty = $newPrice2 * 100;
+
+echo "After applying discounts and taxes, the item's price is reduced from \${$price} to \${$newPrice2}, 
+and you've earned {$loyalty} loyalty points.";
+
+// solution from course
+
+$newPrice = $price - ($price * 0.3);
+$newPrice = $newPrice - 10;
+$newPrice = $newPrice * 1.2;
+ 
+$loyaltyPoints = $newPrice * 100;
+
+echo "After applying discounts and taxes, the item's price is reduced from \${$price} to \${$newPrice}, 
+and you've earned {$loyaltyPoints} loyalty points.";
+?>
