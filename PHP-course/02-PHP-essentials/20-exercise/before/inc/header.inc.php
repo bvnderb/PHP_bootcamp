@@ -14,7 +14,10 @@
     </title>
 </head>
 <body>
-  <header class="header-with-background" style="background-image: url('<?php echo $headerImg; ?>'); ">
+  <header class="header-with-background" style="background-image: url('<?php if (!empty($headerImg)): ?>
+   <?php echo $headerImg; ?>'); ">
+   <?php else: echo 'images/pexels-rachel-claire-4577740.jpg'; ?>'); ">
+   <?php endif; ?>
     <h1>Culinary Cove</h1>
     <p>Your sanctuary for exceptional flavors</p>
     <nav>
